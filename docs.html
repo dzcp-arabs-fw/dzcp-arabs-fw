@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZCP Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>📖 DZCP Documentation</h1>
+    <p>Everything you need to know about the DZCP Framework</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="plugins.html">Plugins</a>
+        <a href="events.html">Events</a>
+        <a href="effects.html">Effects</a>
+        <a href="api.html">API</a>
+    </nav>
+</header>
+
+<section>
+    <h2>🔹 What is DZCP?</h2>
+    <p>DZCP is a powerful framework that allows developers to create plugins and manage modifications for SCP: Secret Laboratory.</p>
+</section>
+
+<section>
+    <h2>👨‍💻 About the Developer</h2>
+    <p>Developer: <strong>[MONCEF50G]</strong> 🚀</p>
+    <p>I am a developer specializing in advanced systems for SCP:SL. I created DZCP to make in-game programming easier and more powerful.</p>
+</section>
+
+<section>
+    <h2>⚙️ How to Create a Plugin</h2>
+    <pre><code>
+using DZCP.Framework;
+using DZCP.Framework.API;
+using DZCP.Framework.Events;
+using DZCP.Framework.Plugins;
+
+public class MyPlugin : IPlugin
+{
+    public string Name => "My Plugin";
+    public string Version => "1.0.0";
+
+    public void OnLoad()
+    {
+        EventManager.RegisterListener("PlayerJoin", new PlayerJoinHandler());
+    }
+}
+    </code></pre>
+    <p>The code above is a simple example of how to register an event when a player joins the server.</p>
+</section>
+
+<section>
+    <h2>📌 Core Concepts</h2>
+    <ul>
+        <li><strong>IPlugin:</strong> The base interface for creating plugins.</li>
+        <li><strong>EventManager:</strong> Manages in-game events dynamically.</li>
+        <li><strong>API:</strong> Provides functions for interacting with the game.</li>
+        <li><strong>PlayerJoinHandler:</strong> An example of handling player join events.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>🛠️ Example Plugins</h2>
+    <ul>
+        <li><a href="plugins.html">Welcome, Plugin</a> - Sends a welcome message to new players.</li>
+        <li><a href="plugins.html">Custom Events Plugin</a> - Creates custom SCP interactions.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2025 DZCP Framework - All rights reserved.</p>
+</footer>
+
+</body>
+</html>
